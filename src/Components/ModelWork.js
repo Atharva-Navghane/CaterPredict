@@ -2,12 +2,6 @@ import React, { useState } from 'react';
 
 const ModelWork = () => {
   const [machine, setMachine] = useState('');
-  // const [components, setComponents] = useState({
-  //   Engine: '',
-  //   Fuel: '',
-  //   Drive: '',
-  //   Misc: ''
-  // });
   const [parameters, setParameters] = useState({
     EngineOilPressure: '',
     EngineSpeed: '',
@@ -50,20 +44,6 @@ const ModelWork = () => {
             <option value="Asphalt_Paver_1">Asphalt_Paver_1</option>
           </select>
         </div>
-        {/* <div style={styles.formGroup}>
-          <label style={styles.label}>Components:</label>
-          {Object.keys(components).map((component) => (
-            <div key={component} style={styles.inputGroup}>
-              <label style={styles.componentLabel}>{component}:</label>
-              <input
-                type="text"
-                value={components[component]}
-                onChange={(e) => setComponents({ ...components, [component]: e.target.value })}
-                style={styles.input}
-              />
-            </div>
-          ))}
-        </div> */}
         <div style={styles.formGroup}>
           <label style={styles.label}>Parameters:</label>
           {Object.keys(parameters).map((param) => (
