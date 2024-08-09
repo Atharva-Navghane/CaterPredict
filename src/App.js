@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Components/Header';
 import ModelWork from './Components/ModelWork';
 import Homepage from './Pages/Homepage';
+import Makers from './Pages/Makers';
 
 const AppContainer = styled('div')({
   backgroundColor: 'f5f5dc',
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />} exact />
           <Route path="/modelwork" element={<ModelWork />} />
+          <Route path="/makers" element={<Makers />} />
         </Routes>
       </AppContainer>
     </BrowserRouter>

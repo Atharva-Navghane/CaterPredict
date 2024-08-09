@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import './ModelWork.css'; // Import the CSS file
 
 const ModelWork = () => {
   const [machine, setMachine] = useState('');
@@ -19,23 +21,29 @@ const ModelWork = () => {
     AirFilterPressureDrop: ''
   });
 
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission
     console.log({ machine, parameters });
   };
 
+  const handleGoBack = () => {
+    navigate('/'); // Navigate back to the homepage
+  };
+
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>ModelWork Input Form</h1>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <div style={styles.formGroup}>
-          <label htmlFor="machine" style={styles.label}>Select Machine:</label>
+    <div className="container">
+      <h1 className="title">ModelWork Input Form</h1>
+      <form onSubmit={handleSubmit} className="form">
+        <div className="formGroup">
+          <label htmlFor="machine" className="label">Select Machine:</label>
           <select
             id="machine"
             value={machine}
             onChange={(e) => setMachine(e.target.value)}
-            style={styles.select}
+            className="select"
           >
             <option value="">Select a machine</option>
             <option value="Excavator_1">Excavator_1</option>
@@ -44,95 +52,27 @@ const ModelWork = () => {
             <option value="Asphalt_Paver_1">Asphalt_Paver_1</option>
           </select>
         </div>
-        <div style={styles.formGroup}>
-          <label style={styles.label}>Parameters:</label>
+        <div className="formGroup">
+          <label className="label">Parameters:</label>
           {Object.keys(parameters).map((param) => (
-            <div key={param} style={styles.inputGroup}>
-              <label style={styles.parameterLabel}>{param.replace(/([A-Z])/g, ' $1')}:</label>
+            <div key={param} className="inputGroup">
+              <label className="parameterLabel">{param.replace(/([A-Z])/g, ' $1')}:</label>
               <input
                 type="text"
                 value={parameters[param]}
                 onChange={(e) => setParameters({ ...parameters, [param]: e.target.value })}
-                style={styles.input}
+                className="input"
               />
             </div>
           ))}
         </div>
-        <button type="submit" style={styles.button}>Check</button>
+        <div className="buttonContainer">
+          <button type="submit" className="button">Check</button>
+          <button type="button" className="button" onClick={handleGoBack}>Go Back</button> {/* New button */}
+        </div>
       </form>
     </div>
   );
-};
-
-const styles = {
-  container: {
-    padding: '2rem',
-    backgroundColor: '#f5f5dc', // Cream white background
-    color: '#333', // Dark gray text color
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    maxWidth: '800px',
-    margin: '0 auto'
-  },
-  title: {
-    fontSize: '2rem',
-    fontWeight: 'bold',
-    marginBottom: '1.5rem',
-    textAlign: 'center',
-  },
-  form: {
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  formGroup: {
-    marginBottom: '1.5rem',
-  },
-  label: {
-    fontSize: '1.1rem',
-    fontWeight: 'bold',
-    marginBottom: '0.5rem',
-    display: 'block',
-  },
-  select: {
-    width: '100%',
-    padding: '0.8rem',
-    fontSize: '1rem',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-  },
-  inputGroup: {
-    marginBottom: '1rem',
-  },
-  componentLabel: {
-    display: 'block',
-    fontSize: '1rem',
-    fontWeight: 'bold',
-    marginBottom: '0.5rem',
-  },
-  parameterLabel: {
-    display: 'block',
-    fontSize: '0.9rem',
-    marginBottom: '0.5rem',
-  },
-  input: {
-    width: '100%',
-    padding: '0.8rem',
-    fontSize: '1rem',
-    borderRadius: '4px',
-    border: '1px solid #ccc',
-  },
-  button: {
-    padding: '0.8rem 1.5rem',
-    fontSize: '1rem',
-    fontWeight: 'bold',
-    color: '#fff',
-    backgroundColor: '#333', // Dark background for the button
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    marginTop: '1rem',
-    textDecoration: 'none',
-  },
 };
 
 export default ModelWork;
