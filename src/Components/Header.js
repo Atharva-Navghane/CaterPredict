@@ -1,38 +1,28 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import './Header.css'; // Import the CSS file
 
 const Header = () => {
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  const handleHomeClick = () => {
+    navigate('/'); // Navigate to the homepage when the button is clicked
+  };
+
   return (
-    <div style={styles.container}>
-      <div>
-        <span style={styles.highlight}>CAT</span>er
-        <span style={styles.highlight}>P</span>redict
+    <div className="header-container">
+      <div className="title-container">
+        <div className="title">
+          <span className="highlight">CAT</span>er
+          <span className="highlight">P</span>redict
+        </div>
+        <div className="subText">
+          Empowering Equipment with <span className="highlight">Predictive Insight</span>
+        </div>
       </div>
-      <div style={styles.subText}>
-        Empowering Equipment with <span style={styles.highlight}>Predictive Insight</span>
-      </div>
+      <button className="home-button" onClick={handleHomeClick}>Home</button> {/* Home button */}
     </div>
   );
 }
-
-const styles = {
-  container: {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5dc', // Cream white background
-    fontSize: '4rem',
-    fontWeight: 'bold',
-    color: '#333', // Dark gray text color
-  },
-  highlight: {
-    color: '#FFD700', // Bright yellow color
-  },
-  subText: {
-    fontSize: '1.5rem', // Smaller size for the subtitle
-    fontWeight: 'normal',
-    marginTop: '1rem', // Adds some space between the title and subtitle
-  },
-};
 
 export default Header;

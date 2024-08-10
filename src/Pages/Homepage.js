@@ -36,7 +36,7 @@ const Homepage = () => {
       <div className="makersSection">
         <h2 className="makersTitle">Meet the Makers</h2>
         <p className="makersDescription">
-          Curious about who built this amazing platform? Click below to discover the team behind the magic!
+          Curious about who built this platform? Click below to discover the team behind this project!
         </p>
         <button className="makersButton" onClick={handleMakersClick}>
           Meet the Makers

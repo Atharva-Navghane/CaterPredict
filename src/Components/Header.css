@@ -1,0 +1,46 @@
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Space between title and button */
+    align-items: center;
+    background-color: #f5f5dc; /* Cream white background */
+    padding: 1rem 2rem;
+    color: #333; /* Dark gray text color */
+  }
+  
+  .title-container {
+    text-align: center; /* Center the title and subtitle */
+    flex: 1; /* Take up all available space, pushing the button to the right */
+  }
+  
+  .title {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  
+  .highlight {
+    color: #FFD700; /* Bright yellow color */
+  }
+  
+  .subText {
+    font-size: 1.5rem; /* Smaller size for the subtitle */
+    font-weight: normal;
+    margin-top: 0.5rem; /* Adds some space between the title and subtitle */
+  }
+  
+  .home-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333; /* Dark background for the button */
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .home-button:hover {
+    background-color: #555; /* Lighter dark color on hover */
+  }
+  

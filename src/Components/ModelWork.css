@@ -35,33 +35,37 @@
 
 .select {
   width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 4px;
+  padding: 1rem; /* Increased padding for better appearance */
+  font-size: 1.1rem; /* Slightly larger font size */
+  border-radius: 8px; /* Rounded corners */
   border: 1px solid #ccc;
+  background-color: #fff; /* White background for select */
 }
 
 .inputGroup {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Increased margin for better spacing */
 }
 
 .parameterLabel {
   display: block;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
 .input {
   width: 100%;
-  padding: 0.8rem;
-  font-size: 1rem;
-  border-radius: 4px;
+  padding: 1rem; /* Increased padding for better appearance */
+  font-size: 1.1rem; /* Slightly larger font size */
+  border-radius: 8px; /* Rounded corners */
   border: 1px solid #ccc;
+  background-color: #fff; /* White background for input */
 }
 
 .buttonContainer {
   display: flex;
   gap: 1rem; /* Adds space between the buttons */
+  flex-direction: column; /* Stack buttons vertically */
+  align-items: center; /* Center-align buttons */
 }
 
 .button {
@@ -71,7 +75,49 @@
   color: #fff;
   background-color: #333; /* Dark background for the button */
   border: none;
-  border-radius: 4px;
+  border-radius: 8px; /* Rounded corners */
   cursor: pointer;
   text-decoration: none;
+}
+
+.dataSummary {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.dataTable th,
+.dataTable td {
+  padding: 1rem; /* Increased padding for better appearance */
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.dataTable th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.dataTable td {
+  background-color: #fff;
+}
+
+.buttonContainer .button {
+  margin-top: 1rem; /* Add space above the button */
+}
+
+.deleteIcon {
+  cursor: pointer;
+  color: #d9534f; /* Red color for delete icon */
+  font-size: 1.2rem; /* Adjust size as needed */
+  transition: color 0.3s ease;
+}
+
+.deleteIcon:hover {
+  color: #c9302c; /* Darker red on hover */
 }
