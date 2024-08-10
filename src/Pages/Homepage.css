@@ -76,3 +76,12 @@
 .makersButton:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
+
+
+.ButtonAlignment
+{
+  display: flex;
+  gap : 25px;
+  justify-content: center;
+}
+

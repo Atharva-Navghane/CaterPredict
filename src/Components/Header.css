@@ -39,8 +39,68 @@
     text-decoration: none;
     transition: background-color 0.3s ease; /* Smooth transition for hover effect */
   }
+
+  .sign-in-button {
+    padding: 0.8rem 1.5rem;
+    margin: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333; /* Dark background for the button */
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
   
   .home-button:hover {
     background-color: #555; /* Lighter dark color on hover */
+  }
+
+  .user-profile {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Cursor changes to pointer when hovering over the profile picture */
+  }
+  
+  .user-pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure the menu appears above other content */
+  }
+  
+  .popup-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .sign-out-button {
+    background-color: #f44336; /* Red background for the sign-out button */
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-out-button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
   }
   
