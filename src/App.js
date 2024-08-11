@@ -4,6 +4,7 @@ import './App.css';
 import Header from './Components/Header';
 import ModelWork from './Components/ModelWork';
 import { AuthProvider } from './firebase/useAuth';
+import Appointment from './Pages/Appointment';
 import Homepage from './Pages/Homepage';
 import Makers from './Pages/Makers';
 
@@ -22,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} exact />
             <Route path="/modelwork" element={<ModelWork />} />
+            <Route path="/Appointment" element={<Appointment />} />
             <Route path="/makers" element={<Makers />} />
           </Routes>
         </AppContainer>

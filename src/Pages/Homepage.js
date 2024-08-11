@@ -9,6 +9,10 @@ const Homepage = () => {
     navigate("/modelwork");
   };
 
+  const handleAppointment = () => {
+    navigate("/Appointment");
+  };
+
   const handleMakersClick = () => {
     navigate("/makers");
   };
@@ -37,10 +41,10 @@ const Homepage = () => {
         <button className="button" onClick={handleModelWorkClick}>
           Click here to analyze
         </button>
-        <button className="button" onClick={handleModelWorkClick}>
+        <button className="button" onClick={handleAppointment}>
           Check Appointments
         </button>
-        <button className="button" onClick={handleModelWorkClick}>
+        <button className="button">
           Notifications
         </button>
       </div>
