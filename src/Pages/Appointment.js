@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Calendar from 'react-calendar';
 import './Appointment.css';
 
 const Appointment = () => {
@@ -20,11 +21,25 @@ const Appointment = () => {
           Confirm Appointment
         </button>
       ) : (
-        <div className="calendar">
+        <div className="calendar-container">
           <h1 className="appointment-title">Appointment Scheduled</h1>
           <p className="appointment-message">
             Your appointment is scheduled for {formattedDate}.
           </p>
+          <Calendar
+            className="calendar-widget"
+            tileClassName={({ date, view }) => {
+              if (view === 'month') {
+                if (date.toDateString() === today.toDateString()) {
+                  return 'highlight-today';
+                }
+                if (date.toDateString() === appointmentDate.toDateString()) {
+                  return 'highlight-appointment';
+                }
+              }
+            }}
+            value={today}
+          />
         </div>
       )}
     </div>
